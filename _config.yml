@@ -1,65 +1,76 @@
 url: https://y7kim.github.io
 baseurl: /agency-jekyll-theme/
-
 # Site settings
-title: Awesome Title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+title: Elevare Digital
+description: Curated products with creative value — discover tech, fashion, and lifestyle gear with a twist.
+url: "https://elevaredigital.great-site.net" # Your custom domain
+baseurl: "" # Leave empty for root
 
+# Author info
+author:
+  name: Dawit
+  email: elevaredigital@gmail.com
+  location: Addis Ababa, Ethiopia
 
-# Team names, titles and social links
-people:
-- name: Kay Garland
-  pic: 1
-  position: Lead Designer
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: stack-overflow
-      url: #
-
-- name: Larry Parker
-  pic: 2
-  position: Lead Marketer
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: linkedin
-      url: #
-
-- name: Diana Petersen
-  pic: 3
-  position: Lead Developer
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: #
-
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+# Social links
 social:
-  - title: twitter
-    url: http://twitter.com/jekyllrb
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket 
-    url: http://bitbucket.org/jekyll
-  - title: github
-    url: http://github.com/jekyll
-
-# Postal address (add as many lines as necessary)
-address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+  twitter: elevaredigital
+  instagram: elevaredigital
+  facebook: elevaredigital
+  linkedin: dawit-elevare
+  github: dabron9
 
 # Build settings
 markdown: kramdown
+theme: minima # You can change this if using a custom theme
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# SEO settings
+seo:
+  name: Elevare Digital
+  description: Discover curated affiliate products with added value — tech, fashion, and lifestyle gear.
+  url: "https://elevaredigital.great-site.net"
+  twitter: elevaredigital
+  facebook: elevaredigital
+
+# Navigation links
+nav:
+  - title: Home
+    url: /
+  - title: Shop
+    url: /shop/
+  - title: Blog
+    url: /blog/
+  - title: Contact
+    url: /contact/
+
+# Collections
+collections:
+  products:
+    output: true
+    permalink: /shop/:name/
+
+# Defaults for product pages
+defaults:
+  - scope:
+      path: ""
+      type: products
+    values:
+      layout: product
+      author: Dawit
+      category: curated
+
+# Permalinks
 permalink: pretty
+
+# Google Analytics (optional)
+google_analytics: UA-XXXXXXXXX-X # Replace with your tracking ID
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
